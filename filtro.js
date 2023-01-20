@@ -8,8 +8,8 @@ const productos = [
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
 
-const li = document.getElementsByName("lista-de-productos")
-const $i = document.querySelector('.input');
+const li = document.getElementById("lista-de-productos") //cambiar a getElementByID
+const $i = document.querySelector('.input');  // le añadimos una clase para que esta llamada 
 
 for (let i = 0; i < productos.length; i++) {
   var d = document.createElement("div")
@@ -28,7 +28,7 @@ for (let i = 0; i < productos.length; i++) {
   li.appendChild(d)
 }
 
-displayProductos(productos)
+// displayProductos(productos) //quitamos esta funcion ya que esta declarada pero nunca se creo
 const botonDeFiltro = document.querySelector("button");
 
 botonDeFiltro.onclick = function() {
